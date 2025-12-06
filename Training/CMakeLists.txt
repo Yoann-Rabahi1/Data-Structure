@@ -5,8 +5,12 @@ project(Training C)
 
 include_directories(.)
 
-add_library(Training STATIC SList.c SList.h )
+add_library(Training STATIC SList.c SList.h
+        tree.c
+        tree.h)
 
-add_executable(Runner main_slist.c)
+add_executable(Runner main_slist.c
+        tree.c
+        tree.h)
 
 target_link_libraries(Runner PRIVATE Training)
