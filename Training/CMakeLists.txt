@@ -13,6 +13,8 @@ add_library(Training STATIC SList.c SList.h
 add_executable(Runner main_slist.c
         tree.c
         tree.h
-        main_btree.c)
+        main_btree.c
+        Queue.c
+        Queue.h)
 
 target_link_libraries(Runner PRIVATE Training)
