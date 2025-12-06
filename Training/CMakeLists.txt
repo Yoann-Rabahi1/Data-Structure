@@ -7,10 +7,12 @@ include_directories(.)
 
 add_library(Training STATIC SList.c SList.h
         tree.c
-        tree.h)
+        tree.h
+        main_btree.c)
 
 add_executable(Runner main_slist.c
         tree.c
-        tree.h)
+        tree.h
+        main_btree.c)
 
 target_link_libraries(Runner PRIVATE Training)
