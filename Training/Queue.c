@@ -36,14 +36,20 @@ int queue_enqueue(Queue* q, TNode* tnode) {
 }
 
 int queue_dequeue(Queue *q, TNode** out) {
-    int res = 0;
-    if (!queue_is_empty(q)) {
-        res=1;
-        Qnode* h = q->head;
-        *out = h->tnode;
-        if (q->head) q->head = q->head->next;
-        else q->tail = NULL;
-        free(h);
+
+    if (queue_is_empty(q)) {
+        return 0; // Échec
     }
-    return res;
+
+    Qnode* h = q->head;
+    *out = h->tnode;
+
+    q->head = q->head->next;
+
+    if (q->head == NULL) {
+        q->tail = NULL;
+    }
+    free(h);
+
+    return 1; // Succès
 }

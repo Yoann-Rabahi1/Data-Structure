@@ -8,11 +8,11 @@
 #include "tree.h"
 #include <stdlib.h>
 
-typedef struct{
+typedef struct Qnode{
     struct Qnode* next;
     const TNode* tnode;
 }Qnode;
-typedef struct  {
+typedef struct Queue{
     Qnode* head;
     Qnode* tail;
 }Queue;

@@ -5,18 +5,12 @@ project(Training C)
 
 include_directories(.)
 
-add_library(Training STATIC SList.c SList.h
-        #tree.c
-        #tree.h
-        #main_btree.c
+add_library(Training STATIC SList.c SList.h Queue.c Queue.h
+        tree.c
+        tree.h
 )
 
-add_executable(Runner main_slist.c
-        #tree.c
-        #tree.h
-        #main_btree.c
-        #Queue.c
-        #Queue.h
-)
+add_executable(Runner main_slist.c main_btree.c)
 
+# Nouveau (Pour tester les arbres) :
 target_link_libraries(Runner PRIVATE Training)
