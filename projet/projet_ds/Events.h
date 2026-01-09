@@ -1,0 +1,18 @@
+//
+// Created by rabah on 09/01/2026.
+//
+
+#ifndef PROJET_DS_EVENTS_H
+#define PROJET_DS_EVENTS_H
+
+typedef struct Event {
+    int ts;         /* timestamp simulé */
+    int vehicle_id; /* identifiant véhicule */
+    int station_id; /* identifiant station */
+    int action;     /* 1=plug_in, 0=plug_out, -1=fault/reset ... */
+} Event;
+
+extern Event DS_EVENTS[];
+extern int   DS_EVENTS_COUNT;
+
+#endif //PROJET_DS_EVENTS_H
