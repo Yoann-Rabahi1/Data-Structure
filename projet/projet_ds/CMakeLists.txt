@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(projet_ds C)   # préciser que c'est un projet en C
+project(projet_ds C)
 
 set(CMAKE_C_STANDARD 11)
 
